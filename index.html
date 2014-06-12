@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown.js</title>
+
+    <!-- Javascript -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="PSDropdown/PSDropdown.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="PSDropdown/PSDropdown.css">
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $("#standardCode").html(convertToHtml('<select id="mySelectID" class="dropdown mySelectClass">' +
+                    '\n\t<option value="1">This is an Option</option>' +
+                    '\n\t<option value="2">Another Option</option>' +
+                    '\n\t<option value="3">Option the Third</option>' +
+                    '\n</select>'));
+
+            $("#dropdownCode").html(convertToHtml('<div class="dropdown">' +
+                    '\n\t<input type="text" id="mySelectID" class="mySelectClass" readonly />' +
+                    '\n\t<ul>' +
+                    '\n\t\t<li data-val="1">This is an Option</li>' +
+                    '\n\t\t<li data-val="2">Another Option</li>' +
+                    '\n\t\t<li data-val="3">Option the Third</li>' +
+                    '\n\t</ul>' +
+                    '\n</div>'));
+        });
+
+        function convertToHtml(s) {
+            return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        };
+
+    </script>
+
+</head>
+<body>
+
+    <div id="header">
+        <div class="title">PSDropdown.js</div>
+        <div class="subtitle">Making Select Elements Styleable</div>
+    </div>
+
+    <div id="content">
+
+        <div class="contentSection">PSDropdown.js provides an alternative to standard HTML select elements. It converts all <code>select</code> elements with the class <code>dropdown</code> to custom <code>dropdown</code> elements that consist of a readonly text element and a list of options. To use this javascript plugin, simply include the PSDropdown.js and PSDropdown.css files, and add the <code>dropdown</code> class to all select elements.</div>
+
+        <div class="spacer"></div>
+
+        <div class="contentSection">Standard Select Element</div>
+        <div class="contentSection">
+            <select>
+                <option>This is an Option</option>
+                <option>Another Option</option>
+                <option>Option the Third</option>
+            </select>
+        </div>
+
+        <pre class="prettyprint lang-html contentSection" id="standardCode"></pre>
+
+        <div class="spacer"></div>
+
+        <div class="contentSection">Becomes a Custom Dropdown Element</div>
+        <div class="contentSection">
+            <select class="dropdown">
+                <option>This is an Option</option>
+                <option>Another Option</option>
+                <option>Option the Third</option>
+            </select>
+        </div>
+
+        <pre class="prettyprint lang-html contentSection" id="dropdownCode"></pre>
+
+        <div class="spacer"></div>
+
+        <div class="menu">
+            <div class="btn" onclick="window.location='PSDropdown.zip'">Download Source</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

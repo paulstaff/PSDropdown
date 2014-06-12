@@ -1,0 +1,100 @@
+@font-face {
+	font-family: Existence-Light;
+	src: local("Existence-Light"),
+	local("Existence-Light"),
+	url("../fonts/Existence-Light.otf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #2C2E3C;
+	font-family: Existence-Light, Helvetica, Verdana, Arial, Sans-Serif;
+}
+
+#content {
+    padding: 35px 0;
+}
+
+#header {
+	background: #3F4253;
+}
+
+.title {
+	font-size: 48px;
+	line-height: 72px;
+	width: 100vw;
+	text-align: center;
+	color: #DDDDDD;
+	padding: 15px 0 10px 0;
+}
+
+.subtitle {
+	font-size: 20px;
+	line-height: 40px;
+	color: #CCCCCC;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+.spacer {
+    height: 35px;
+}
+
+#canvas {
+	height: 500px;
+	width: 500px;
+	display: block;
+	margin: 25px auto;
+}
+
+.contentSection {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px 0;
+    color: #FFFFFF;
+    line-height: 26px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.contentSection code {
+    color: #89e2fa;
+}
+
+.centered {
+    text-align: center;
+}
+
+.filled {
+    background: #3F4253;
+}
+
+.menu {
+	width: 100vw;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	color: #DDDDDD;
+	font-size: 22px;
+	line-height: 32px;
+	padding: 12px 35px 10px 35px;
+	background: #3F4253;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #50536D;
+}
+
+select {
+    font-size: 14px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    padding: 5px 8px;
+    width: 200px;
+}

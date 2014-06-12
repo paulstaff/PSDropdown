@@ -1,0 +1,95 @@
+/*
+ *
+ *  Programmer: Paul Staff
+ *  Date: 2014.05.15
+ *
+ *  Copyright (c) 2014, nplexity, LLC.  All Rights Reserved.
+ *  www.nplexity.com
+ *
+ *  dropdown.css
+ *
+ *
+ *  This is the CSS stylesheet for dropdown.js dropdown elements.
+ *
+ *  To customize the dropdown elements, edit the custom style sections
+ *  of the .dropdown input[type='text'], .dropdown ul, .dropdown ul li,
+ *  and .dropdown ul li:hover blocks.
+ *
+ *  DO NOT EDIT the sections titled 'Required Styles', as these are
+ *  necessary to properly display the dropdown.
+ *
+ *
+ */
+
+.dropdown {
+
+    /* Required Styles */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    /* Add Custom Styles Here */
+
+}
+
+.dropdown input[type='text'] {
+
+    /* Add Custom Styles Here */
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    padding: 8px 8px 5px 8px;
+    width: 200px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+
+}
+
+.dropdown ul {
+
+    /* Required Styles */
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    z-index: 10;
+
+    /* Add Custom Styles Here */
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 3px 0 #666666, -2px 2px 3px 0 #666666;
+    margin: 0;
+    background: #FFFFFF;
+    color: #333333;
+    text-align: left;
+    font-size: 14px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+
+}
+
+.dropdown ul li {
+
+    /* Required Styles */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+        -moz-box-sizing: border-box;
+
+    /* Add Custom Styles Here */
+    padding: 5px 8px 3px 8px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+
+    /* Add Custom Styles Here */
+    background: #DDDDDD;
+
+}
+
+.dropdown ul li .val {
+
+    /* Required Styles */
+    display: none;
+
+}
