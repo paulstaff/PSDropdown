@@ -43,13 +43,13 @@ Using PSDropdown
 
 To create a `dropdown` element, simply add the class `dropdown` to a standard HTML `select` element:
 
-	```HTML
-	<select id="mySelectID" class="dropdown mySelectClass">
-		<option value="1">This is an Option</option>
-        <option value="2">Another Option</option>
-        <option value="3">Option the Third</option>
-    </select>  
-	```
+```HTML
+<select id="mySelectID" class="dropdown mySelectClass">
+	<option value="1">This is an Option</option>
+    <option value="2">Another Option</option>
+    <option value="3">Option the Third</option>
+</select>
+```
 
 When `PSDropdown.convert()` is run, the `select` element will be replaced with a `dropdown` element that contains a styled text `input` and and a list of all options. Any other classes and IDs associated with the `select` element will be retained and associated with the new `dropdown` element. The value of each option will be associated with the `data-val` attribute for each list item while the text of the option will be the text for the list item:
 
@@ -70,20 +70,20 @@ As explained above, each `dropdown` element retain all classes/ids associated wi
 
 Additionally, the `Dropdown.css` file contains a number of different style tags that control the display of each `dropdown` element, some of which are required to properly render each `dropdown` element and others that are open for user customization.  Sections that are required are clearly marked with a **Required Styles** comment while sections that are editable are marked with an **Add Custom Styles Here** comment.  (Technically, all style sections are editable, just make sure you know what you're doing first).  An example of the `dropdown` list element CSS is below:
 
-	```CSS
-	.dropdown ul li {
+```CSS
+.dropdown ul li {
 
-    	/* Required Styles */
-    	display: block;
-    	width: 100%;
-    	box-sizing: border-box;
-        	-moz-box-sizing: border-box;
+   	/* Required Styles */
+   	display: block;
+   	width: 100%;
+   	box-sizing: border-box;
+       	-moz-box-sizing: border-box;
 
-    	/* Add Custom Styles Here */
-    	padding: 5px 8px 3px 8px;
-    	cursor: pointer;
-	}
-	```
+   	/* Add Custom Styles Here */
+   	padding: 5px 8px 3px 8px;
+   	cursor: pointer;
+}
+```
 
 
 
