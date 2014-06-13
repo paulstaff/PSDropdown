@@ -18,20 +18,20 @@ Installation
 2. Unzip the contents and include the `PSDropdown.js` and `PSDropdown.css` files in the plugins folder for your project.
 3. Include the following two lines in the `<head>` section of your HTML file (be sure to change file path):
 
-```
+	```HTML
 	<script src="path/to/plugins/folder/PSDropdown.js"></script>
 	<link rel="stylesheet" href="path/to/plugins/folder/PSDropdown.css">
-```
+	```
 
 4. Add the class `dropdown` to all select elements that you would like to convert: 
 
-```
+	```HTML
 	<select class="dropdown">
 		<option value="1">This is an Option</option>
         <option value="2">Another Option</option>
         <option value="3">Option the Third</option>
     </select>           
-```
+	```
 
 5. Optionally, you can call `PSDropdown.convert()` at any point to re-render all select inputs on the page as dropdown inputs (use this after inserting a new select element in the DOM).  This does not affect select inputs already rendered as dropdowns.
 
