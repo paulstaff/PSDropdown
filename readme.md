@@ -53,16 +53,16 @@ To create a `dropdown` element, simply add the class `dropdown` to a standard HT
 
 When `PSDropdown.convert()` is run, the `select` element will be replaced with a `dropdown` element that contains a styled text `input` and and a list of all options. Any other classes and IDs associated with the `select` element will be retained and associated with the new `dropdown` element. The value of each option will be associated with the `data-val` attribute for each list item while the text of the option will be the text for the list item:
 
-	```HTML
-	<div class="dropdown">
-		<input type="text" id="mySelectID" class="mySelectClass" readonly />
-		<ul>
-			<li data-val="1">This is an Option</li>
-			<li data-val="2">Another Option</li>
-			<li data-val="3">Option the Third</li>
-		</ul>
-	</div>  
-	```
+```HTML
+<div class="dropdown">
+	<input type="text" id="mySelectID" class="mySelectClass" readonly />
+	<ul>
+		<li data-val="1">This is an Option</li>
+		<li data-val="2">Another Option</li>
+		<li data-val="3">Option the Third</li>
+	</ul>
+</div>
+```
 
 ### Editing Your `dropdown` Elements
 
