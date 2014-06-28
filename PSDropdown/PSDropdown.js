@@ -41,7 +41,7 @@ function PSDropdown() {
             });
 
             // Append the text input and unordered list
-            dropdown.append('<input type="text" class="' + $(this).attr('class') + '" id="' + $(this).attr('id') + '" value="' + $(this).children("option").first().html() + '" readonly /><ul></ul>');
+            dropdown.append('<input type="text" class="' + $(this).attr('class') + '" id="' + $(this).attr('id') + '" value="' + $(this).children("option").first().html() + '" readonly /><div class="arrow"></div><ul></ul>');
 
             // Create the options variable
             var options = '';
@@ -63,28 +63,34 @@ function PSDropdown() {
     // This function initializes all dropdowns
     function initializeDropdowns() {
 
+        $(".dropdown .arrow").click(function() {
+            $(this).siblings("input[type='text']").trigger("click");
+        });
+
         // Set the click event for each dropdown
         $(".dropdown input[type='text']").click(function() {
 
-            // Set the list position below the text input and width equal to input width
-            $(this).siblings("ul").css({'top': $(this).outerHeight(true), 'left': 0, 'width': $(this).outerWidth()}).fadeIn(200);
+            if($(this).siblings("ul").is( ":hidden" )) {
+                // Set the list position below the text input and width equal to input width
+                $(this).siblings("ul").css({'top': $(this).outerHeight(true), 'left': 0, 'width': $(this).outerWidth()}).fadeIn(200);
 
-            // Set the click event for each list element
-            $(".dropdown ul li").click(function() {
-                $(this).parent().siblings("input[type='text']").val($(this).attr("data-val"));
+                // Set the click event for each list element
+                $(".dropdown ul li").click(function() {
+                    $(this).parent().siblings("input[type='text']").val($(this).attr("data-val"));
 
-                // Remove click event to prevent duplicates
-                $(".dropdown ul li").off("click");
-            });
+                    // Remove click event to prevent duplicates
+                    $(".dropdown ul li").off("click");
+                });
 
-            // Set document mouseup function to close the list
-            $(document).mouseup(function (e)
-            {
-                $(".dropdown ul").fadeOut(200);
+                // Set document mouseup function to close the list
+                $(document).mouseup(function (e)
+                {
+                    $(".dropdown ul").fadeOut(200);
 
-                // Remove click event to prevent duplicates
-                $(document).off('mouseup');
-            });
+                    // Remove click event to prevent duplicates
+                    $(document).off('mouseup');
+                });
+            }
         });
     }
 }

@@ -30,13 +30,13 @@
     display: inline-block;
 
     /* Add Custom Styles Here */
+    cursor: pointer;
 
 }
 
 .dropdown input[type='text'] {
 
     /* Add Custom Styles Here */
-    cursor: pointer;
     font-size: 14px;
     font-family: Helvetica, Verdana, Arial, sans-serif;
     padding: 8px 8px 5px 8px;
@@ -91,5 +91,23 @@
 
     /* Required Styles */
     display: none;
+
+}
+
+.dropdown .arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+
+    border-top: 7px solid #000000;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
 
 }

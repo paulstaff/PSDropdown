@@ -1,7 +1,12 @@
-PSDropdown - v0.9.1
+PSDropdown - v0.9.2
 ==========
 
 PSDropdown provides an alternative to standard HTML select elements. It converts all select elements with the class `dropdown` to custom `dropdown` elements that consist of a readonly text element and a list of options. To use this javascript plugin, simply include the `PSDropdown.js` and `PSDropdown.css` files and add the `dropdown` class to all select elements.
+
+### Version Updates
+
+- Added dropdown arrow to make display look more like traditional select element
+- Fixed bug that closed and then re-opened dropdown list upon clicking input
 
 
 Installation
