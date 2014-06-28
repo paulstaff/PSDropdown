@@ -28,6 +28,10 @@ $(document).ready(function() {
 
 function PSDropdown() {
 
+    this.options = {
+        icon: "arrow"  // Defaults to arrow.  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
+    }
+
     // This function replaces all selects with a dropdown div containing
     // a readonly text input and an unordered list of all options
     this.convert = function() {
@@ -41,7 +45,14 @@ function PSDropdown() {
             });
 
             // Append the text input and unordered list
-            dropdown.append('<input type="text" class="' + $(this).attr('class') + '" id="' + $(this).attr('id') + '" value="' + $(this).children("option").first().html() + '" readonly /><div class="arrow"></div><ul></ul>');
+            dropdown.append('<input type="text" class="' + $(this).attr('class') + '" id="' + $(this).attr('id') + '" value="' + $(this).children("option").first().html() + '" readonly /><ul></ul>');
+
+            // Append the icon
+            if (PSDropdown.options['icon'] == "arrow") {
+                dropdown.append('<div class="arrow"></div>');
+            } else if (PSDropdown.options['icon'] == "chevron") {
+                dropdown.append('<div class="chevron"></div>');
+            }
 
             // Create the options variable
             var options = '';

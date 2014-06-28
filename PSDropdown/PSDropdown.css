@@ -95,19 +95,80 @@
 }
 
 .dropdown .arrow {
+
+    /* Required Styles */
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 0;
     height: 0;
+
+    /* Add Custom Styles Here */
+    right: 10px;  /* Controls offset from right side of input */
+    border-top: 7px solid #000000;  /* Adjust the border width to control arrow size */
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 
-    border-top: 7px solid #000000;
+}
+
+.dropdown .chevron {
+
+    /* Required Styles */
     position: absolute;
-    right: 10px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
+
+    /* Add Custom Styles Here */
+    right: 10px;  /* Controls offset from right side of input */
+    height: 3px;
+    width: 15px;
 
 }
+
+.dropdown .chevron:before {
+
+    /* Required Styles */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+
+    /* Add Custom Styles Here */
+    background: #000000;  /* Color for left side of chevron */
+    -webkit-transform: skew(0deg, 20deg);  /* Adjust the left skew to make the angle of inclination steeper or shallower */
+    -moz-transform: skew(0deg, 20deg);
+    -ms-transform: skew(0deg, 20deg);
+    -o-transform: skew(0deg, 20deg);
+    transform: skew(0deg, 20deg);
+
+}
+
+.dropdown .chevron:after {
+
+    /* Required Styles */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+
+    /* Add Custom Styles Here */
+    background: #000000;  /* Color for left side of chevron */
+    -webkit-transform: skew(0deg, -20deg);  /* Adjust the left skew to make the angle of inclination steeper or shallower */
+    -moz-transform: skew(0deg, -20deg);
+    -ms-transform: skew(0deg, -20deg);
+    -o-transform: skew(0deg, -20deg);
+    transform: skew(0deg, -20deg);
+
+}​

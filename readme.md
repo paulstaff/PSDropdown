@@ -90,6 +90,19 @@ Additionally, the `Dropdown.css` file contains a number of different style tags 
 }
 ```
 
+### Dropdown Input Icon
+
+By default, dropdown elements contain a downward facing arrow to indicate to the user that the element is clickable and will open into a dropdown list (similar to traditional select elements).
+
+In place of the the default arrow, you also have the option to display a chevron or no icon at all.  To do so, simply adjust the `icon` property of the `options` object in `PSDropdown.js`:
+
+```Javascript
+this.options = {
+        icon: "arrow"  // Defaults to arrow.  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
+    }
+```
+
+To edit the icon style, make adjustments to the `.dropdown .arrow` or `.dropdown .chevron` classes in `PSDropdown.css`.
 
 
 Developed By
