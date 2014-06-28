@@ -5,7 +5,8 @@ PSDropdown provides an alternative to standard HTML select elements. It converts
 
 ### Version Updates
 
-- Added dropdown arrow to make display look more like traditional select element
+- Added default arrow dropdown icon to make display look more like traditional select element
+- Added options to set dropdown icon as a chevron or no icon
 - Fixed bug that closed and then re-opened dropdown list upon clicking input
 
 
@@ -98,7 +99,7 @@ In place of the the default arrow, you also have the option to display a chevron
 
 ```Javascript
 this.options = {
-        icon: "arrow"  // Defaults to arrow.  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
+        icon: "arrow"  // Defaults to "arrow".  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
     }
 ```
 

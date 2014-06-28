@@ -29,7 +29,7 @@ $(document).ready(function() {
 function PSDropdown() {
 
     this.options = {
-        icon: "arrow"  // Defaults to arrow.  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
+        icon: "arrow"  // Defaults to "arrow".  Change this to "chevron" to display a chevron or "none" to not display an icon.  Edit icon styles in PSDropdown.css
     }
 
     // This function replaces all selects with a dropdown div containing
